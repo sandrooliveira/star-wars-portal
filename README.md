@@ -9,7 +9,7 @@ To run this application, simply open a terminal and go to the root folder, then 
  
 As a Star Wars fan, I need an application to see information about the Star Wars Universe.  
  
-Functional Requirements 
+## Functional Requirements 
 * The app should have a page where I can see the lists of characters and starships in different tabs. Each list should contain at least the name of the item. 
   * It should have a text field to filter the result of characters or starships.  
   * The list should be ordered alphabetically.
@@ -23,7 +23,7 @@ Functional Requirements
   * On starship detail, pilots should be listed.
   * Clicking in the pilot should redirect to the character detail.   
  
-Non-functional requirements 
+## Non-functional requirements 
 * You must use Angular 4+
 * Angular CLI is allowed.
 * Usage of observables.
@@ -37,13 +37,13 @@ Non-functional requirements
  
 *  You are free to decide and define points not covered by these requirements. 
  
-Bonus items 
+## Bonus items 
 * Unit tests
 * Functional tests
 * Configuration files
 * Lazy loading 
  
-Evaluation Criteria 
+## Evaluation Criteria 
 * Functional and Non Functional Requirements
 * Code Quality
 * Folder Structure
