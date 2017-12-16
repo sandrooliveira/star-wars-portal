@@ -1,14 +1,22 @@
 import { Character } from './characters.model';
+import { Http, Response, Headers } from '@angular/http';
+import { Injectable } from '@angular/core';
+import 'rxjs/Rx';
 
+@Injectable()
 export class CharactersService {
 
-    private characters: Character[] = [
-        new Character('Darth Vader'),
-        new Character('Yoda'),
-        new Character('Luke Skywalker')     
-    ];
+    constructor(private http:Http){
+        this.http = http;
+    }
 
     getCharacters(){
-        return this.characters.slice();
+       return this.http.get('http://swapi.co/api/people')
+           .map(
+               (response: Response) =>{
+                   const data = response.json();
+                   return data;
+               }
+           );
     }
 }
