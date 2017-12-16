@@ -1,14 +1,18 @@
 import { Starship } from "./starship.model";
+import { Injectable } from "@angular/core";
+import { Http, Response } from "@angular/http";
+import 'rxjs/Rx';
 
+@Injectable()
 export class StarshipService{
 
-    private starships: Starship[] = [
-        new Starship("Nave 1"),
-        new Starship("Nave 2"),
-        new Starship("Nave 3")
-    ];
+    constructor(private http: Http){};
 
     getStarships(){
-        return this.starships.slice();
+        return this.http.get('https://swapi.co/api/starships/')
+        .map( (response:Response) =>{
+           const starships: Starship[] = response.json().results;
+           return starships;
+        })
     }
 }
