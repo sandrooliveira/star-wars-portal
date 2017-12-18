@@ -7,5 +7,7 @@ import { ListItem } from "./item/model/item.model";
     styleUrls: ['./list.component.css']
 })
 export class ListComponent{
+    @Input() title: string;
     @Input() items: ListItem[];
+    filteredName = '';
 }

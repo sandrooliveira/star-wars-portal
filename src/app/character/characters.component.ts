@@ -6,8 +6,7 @@ import { Response } from '@angular/http';
 @Component({
     selector: 'app-characters',
     templateUrl: './characters.component.html',
-    styleUrls: ['./characters.component.css'],
-    providers: [ CharactersService ]
+    styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit{
     characters: Character[];

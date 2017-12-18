@@ -1,3 +1,4 @@
 export interface ListItem{
-    name: String;
+    name: string;
+    url: string;
 }
