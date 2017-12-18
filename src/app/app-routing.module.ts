@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
-import { StarshipsComponent } from './starships/starships.component';
 import { RouterModule } from '@angular/router';
-import { StarshipDetailComponent } from './starships/starship-detail/starship-detail/starship-detail.component';
 
 const appRoutes: Routes = [
-  
+   {path:'', redirectTo:"/characters", pathMatch:"full"},
+   {path:'characters', loadChildren:'app/character/character.module#CharacterModule'},
+   {path:'starships', loadChildren:'app/starships/starship.module#StarShipModule'}
+   
 ];
 
 @NgModule({

@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { StarshipDetailComponent } from './starship-detail/starship-detail/starship-detail.component';
 
 const appRoutes: Routes = [
-    { path: 'starships', component: StarshipsComponent, children:[
+    { path: '', component: StarshipsComponent, children:[
         {path: ':id', component: StarshipDetailComponent}
     ]}
 ];
