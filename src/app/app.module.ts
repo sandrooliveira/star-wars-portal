@@ -16,9 +16,9 @@ import { StarShipModule } from './starships/starship.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     CharacterModule,
-    StarShipModule
+    StarShipModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
